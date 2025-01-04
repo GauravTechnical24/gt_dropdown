@@ -1,39 +1,49 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# gt_dropdown
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+`gt_dropdown` is a highly customizable and feature-rich dropdown widget for Flutter, offering seamless integration with forms, validation, animations, and extensive styling options.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+ - Fully customizable dropdown and menu appearance, including colors, borders, text styles, and border radius.
+ - Built-in validation with customizable error messages and styles for seamless form integration.
+ - Smooth animations for opening and closing the dropdown menu, enhancing user experience.
+ - Supports hover effects and highlights the selected item for better user interaction.
+ - Optionally add dividers between dropdown items for improved visual separation and clarity.
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+To use this package, add gt_dropdown as a dependency in your pubspec.yaml file.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+Minimal example:
 
 ```dart
-const like = 'sample';
+     GTDropdown<String>(
+                    items: const ['Option 1', 'Option 2', 'Option 3'],
+                  )
 ```
 
-## Additional information
+Custom settings:
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+```dart
+  GTDropdown<String>(
+                    items: const ['Option 1', 'Option 2', 'Option 3'],
+                    dropdownBorderRadius: BorderRadius.circular(8),
+                    dropdownBorderColor: Colors.greenAccent,
+                    menuBorderRadius: BorderRadius.circular(8),
+                    menuBorderColor: Colors.green,
+                    highlightSelectedItem: true,
+                    selectedHighlightTextStyle: const TextStyle(
+                        color: Colors.blue, fontWeight: FontWeight.bold),
+                    selectedItemColor: Colors.blue.shade100,
+                    validator: (value) => value != null,
+                    validationMessage: 'Please select an option',
+                    errorBorderColor: Colors.red,
+                    name: 'dropdown1', // Optional: for identification
+                  )
+```
+
+## See also
+
+ - [linkedin](https://www.linkedin.com/in/gauravtechnical24/)
